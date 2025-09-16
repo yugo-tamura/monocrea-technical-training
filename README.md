@@ -46,17 +46,33 @@ nodebrew use <target version>
 node -v
 
 
-リポジトリのclone
+リポジトリのcloneとアプリの起動
 
 1.Git Bashで以下のコマンドを入力する。
 git clone https://github.com/yugo-tamura/monocrea-technical-training.git
 
 <img width="947" height="404" alt="image" src="https://github.com/user-attachments/assets/1975e79a-1615-427f-9a84-6bc6bc555392" />
 
+2.以下のコマンドを入力し、mono-backディレクトリに移動する。
+cd monocrea-technical-training/mono-back
 
-cd monocrea-technical-training
+3.以下のコマンドを入力し、バックエンドアプリを起動する。
+./mvnw quarkus:dev
 
+3.以下のコマンドを入力し、mono-frontディレクトリに移動する。
+cd ../mono-fron
 
+4.以下のコマンドを入力し、json-serverをインストールする。
+npm install -g json-server@0.17.4
+
+5.以下のコマンドを入力し、json-serverを起動する。
+npx json-server --watch db.json -p 3000
+
+6.以下のコマンドを入力し、依存関係をインストールする。
+pnpm install
+
+7.以下のコマンドを入力し、フロントエンドアプリを起動する。
+pnpm dev --open
 
 
 
