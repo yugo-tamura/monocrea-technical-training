@@ -1,0 +1,56 @@
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    margin: auto;
+    width: 70%;
+}
+
+.buttonEffect {
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    transition:
+        background 0.2s,
+        color 0.2s,
+        border-color 0.2s;
+}
+
+.buttonEffect:hover {
+    background: #000;
+    color: #fff;
+}
+
+.select-label {
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    white-space: nowrap;
+}
+
+select,
+input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.4rem 0.6rem;
+    height: 34px;
+    font-size: 1rem;
+}
+
+input[type="text"] {
+    flex: 1;
+}
+
+select:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: #000;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
