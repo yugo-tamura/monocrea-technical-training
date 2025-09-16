@@ -4,7 +4,7 @@
 
 Windows
 Chocolatey
-1.Windows PowerShellを管理者として起動し、以下のコマンドを実行する。
+1.Windows PowerShellを管理者として起動し、以下のコマンドを実行する。  
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = 
 [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
@@ -58,21 +58,27 @@ git clone https://github.com/yugo-tamura/monocrea-technical-training.git
 cd monocrea-technical-training/mono-back
 
 3.以下のコマンドを入力し、バックエンドアプリを起動する。
+
 ./mvnw quarkus:dev
 
 3.以下のコマンドを入力し、mono-frontディレクトリに移動する。
+
 cd ../mono-fron
 
 4.以下のコマンドを入力し、json-serverをインストールする。
+
 npm install -g json-server@0.17.4
 
 5.以下のコマンドを入力し、json-serverを起動する。
+
 npx json-server --watch db.json -p 3000
 
 6.以下のコマンドを入力し、依存関係をインストールする。
+
 pnpm install
 
 7.以下のコマンドを入力し、フロントエンドアプリを起動する。
+
 pnpm dev --open
 
 
