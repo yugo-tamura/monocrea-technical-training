@@ -11,7 +11,9 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 2.コマンドプロンプトを管理者として起動し、以下のコマンドを実行する。
 choco install -y git
 choco install -y corretto21jdk
+choco install -y maven
 choco install -y docker-desktop
+choco install -y vscode
 choco install -y pnpm
 choco install -y nodejs-lts
 
@@ -23,7 +25,9 @@ Homebrew
 2.ターミナルを起動し、以下のコマンドを実行する。
 brew install git
 brew install corretto@21
+brew install maven
 brew install docker --cask
+brew install visual-studio-code --cask
 brew install pnpm
 brew install nodebrew
 
@@ -44,12 +48,13 @@ node -v
 
 リポジトリのclone
 
-1.以下のURLからリポジトリを開く。
-https://github.com/yugo-tamura/monocrea-technical-training/tree/main
-
-2.
+1.Git Bashで以下のコマンドを入力する。
+git clone https://github.com/yugo-tamura/monocrea-technical-training.git
 
 <img width="947" height="404" alt="image" src="https://github.com/user-attachments/assets/1975e79a-1615-427f-9a84-6bc6bc555392" />
+
+
+cd monocrea-technical-training
 
 
 
