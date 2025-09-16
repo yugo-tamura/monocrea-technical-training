@@ -42,3 +42,19 @@ nodebrew use <target version>
 node -v
 
 
+リポジトリのclone
+
+1.以下のURLからリポジトリを開く。
+https://github.com/yugo-tamura/monocrea-technical-training/tree/main
+
+2.
+
+<img width="947" height="404" alt="image" src="https://github.com/user-attachments/assets/1975e79a-1615-427f-9a84-6bc6bc555392" />
+
+
+
+
+
+
+
+
