@@ -138,7 +138,7 @@ const res = await fetch(`http://localhost:8080/users/${params.userId}`);
 31行目~35行目
 ```ts
 const res = await fetch(`http://localhost:8080/users`, {
-	method: "POST",
+  method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ name })
 });
