@@ -346,5 +346,5 @@ cd monocrea-technical-training/mono-front
 
 #### 7.以下のコマンドを入力し、フロントエンドアプリを起動する。
 ```bash
-cd pnpm dev --open
+pnpm dev --open
 ```
