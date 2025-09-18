@@ -94,7 +94,7 @@ pnpm install
 
 #### 2.以下のコマンドを入力し、dockerディレクトリに移動する。
 ```bash
-cd monocrea-technical-training\mono-back\src\main\docker
+cd monocrea-technical-training/mono-back/src/main/docker
 ```
 
 #### 3.以下のコマンドを入力し、Dockerコンテナを作成し、起動する。
