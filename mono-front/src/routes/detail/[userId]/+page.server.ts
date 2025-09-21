@@ -1,5 +1,6 @@
 import { error, redirect } from "@sveltejs/kit";
 import type { PageServerLoad, Actions } from "./$types";
+import type { User } from "$lib/models/User";
 
 export const load = (async ({ fetch, params }) => {
 
@@ -11,7 +12,9 @@ export const load = (async ({ fetch, params }) => {
 
     if (!res.ok) throw error(res.status, "Not Found");
 
-    return { user: await res.json() };
+    const user: User = await res.json();
+
+    return { user };
 
 }) satisfies PageServerLoad;
 
