@@ -11,12 +11,9 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import java.util.List;
-import java.util.Optional;
-
+import jp.co.monocrea.application.service.UserService;
 import jp.co.monocrea.presentation.model.request.UserRequest;
 import jp.co.monocrea.presentation.model.response.UserResponse;
-import jp.co.monocrea.application.service.UserService;
-
 import org.jboss.resteasy.reactive.RestPath;
 import org.jboss.resteasy.reactive.RestQuery;
 
@@ -39,11 +36,12 @@ public class UserResource {
   @GET
   @Path("/{userId}")
   @Produces(MediaType.APPLICATION_JSON)
-  public UserResponse detail(@RestPath int userId) {
+  public Response detail(@RestPath int userId) {
 
-    Optional<UserResponse> user = userService.getUserById(userId);
-   
-    return user.orElse(null);
+    return userService
+        .getUserById(userId)
+        .map(user -> Response.ok(user).build())
+        .orElse(Response.status(Response.Status.NOT_FOUND).build());
   }
 
   @POST
@@ -74,7 +72,7 @@ public class UserResource {
   public Response delete(@RestPath int userId) {
 
     UserResponse response = userService.deleteUser(userId);
-    
+
     return Response.ok(response).build();
   }
 }

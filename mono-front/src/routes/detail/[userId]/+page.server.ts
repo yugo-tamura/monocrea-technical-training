@@ -4,6 +4,8 @@ import type { User } from "$lib/models/User";
 
 export const load = (async ({ fetch, params }) => {
 
+    if (!/^\d+$/.test(params.userId)) throw error(404, "Not Found");
+
     // json-server
     // const res = await fetch(`http://localhost:3000/users/${params.userId}`);
 
